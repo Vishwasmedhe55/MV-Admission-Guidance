@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment Form | MV Admission Guidance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="enrollment-style.css">
+</head>
+<body>
+
+    <img src="deco-top-right.png" class="deco-img deco-top-right" alt="">
+    <img src="deco-bottom-left.png" class="deco-img deco-bottom-left" alt="">
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                MV<span> Admission Guidance</span>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="enrollment.html" class="btn-nav">Enroll Now</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="enrollment-section">
+            <div class="container">
+                <div class="form-wrapper hidden-fade">
+                    <h2 class="section-title">Final Enrollment Form</h2>
+                    <p class="section-subtitle">Please fill out the form below with accurate details to complete your enrollment.</p>
+                    
+                    <form action="https://formspree.io/f/mwpndval" method="POST" class="final-form">
+                        <input type="hidden" name="submissionID" id="submissionID">
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Student's Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="e.g., Anjali Deshmukh" pattern="[a-zA-Z\s]+" title="Name should only contain letters and spaces" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentPhone">Student's Contact Number</label>
+                                <input type="tel" id="studentPhone" name="studentPhone" placeholder="10-digit mobile number" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Student's Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="e.g., anjali@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="parentPhone">Parent's Contact Number</label>
+                                <input type="tel" id="parentPhone" name="parentPhone" placeholder="10-digit mobile number" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sscScore">10th (SSC) Percentage</label>
+                                <input type="text" id="sscScore" name="sscScore" placeholder="e.g., 92.40" pattern="[0-9]{1,2}(\.[0-9]{1,2})?" title="Please enter a valid percentage, e.g., 92.40" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hscScore">12th (HSC) Percentage</label>
+                                <input type="text" id="hscScore" name="hscScore" placeholder="e.g., 88.60 or Appearing" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mhtcetScore">MHT-CET Score (Percentile)</label>
+                                <input type="text" id="mhtcetScore" name="mhtcetScore" placeholder="e.g., 99.12" pattern="[0-9]{1,2}(\.[0-9]{1,2})?" title="Please enter a valid percentile, e.g., 99.12">
+                            </div>
+                            <div class="form-group">
+                                <label for="jeeScore">JEE Score (Percentile)</label>
+                                <input type="text" id="jeeScore" name="jeeScore" placeholder="e.g., 98.50" pattern="[0-9]{1,2}(\.[0-9]{1,2})?" title="Please enter a valid percentile, e.g., 98.50">
+                            </div>
+                            <div class="form-group">
+                                <label for="neetScore">NEET Score (Marks)</label>
+                                <input type="text" id="neetScore" name="neetScore" placeholder="e.g., 650" pattern="[0-9]{3}" title="Please enter a valid score, e.g., 650">
+                            </div>
+                            <div class="form-group">
+                                <label for="course">Primary Course Interest</label>
+                                <select id="course" name="course" required>
+                                    <option value="" disabled selected>Select Primary Course</option>
+                                    <option value="Engineering">Engineering</option>
+                                    <option value="Medical">Medical</option>
+                                    <option value="Pharmacy">Pharmacy</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label>Preferred Admission District(s) (Select all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="districts[]" value="Ahmednagar"> Ahmednagar</label>
+                                    <label><input type="checkbox" name="districts[]" value="Akola"> Akola</label>
+                                    <label><input type="checkbox" name="districts[]" value="Amravati"> Amravati</label>
+                                    <label><input type="checkbox" name="districts[]" value="Chhatrapati Sambhajinagar"> Chh. Sambhajinagar</label>
+                                    <label><input type="checkbox" name="districts[]" value="Beed"> Beed</label>
+                                    <label><input type="checkbox" name="districts[]" value="Bhandara"> Bhandara</label>
+                                    <label><input type="checkbox" name="districts[]" value="Buldhana"> Buldhana</label>
+                                    <label><input type="checkbox" name="districts[]" value="Chandrapur"> Chandrapur</label>
+                                    <label><input type="checkbox" name="districts[]" value="Dhule"> Dhule</label>
+                                    <label><input type="checkbox" name="districts[]" value="Gadchiroli"> Gadchiroli</label>
+                                    <label><input type="checkbox" name="districts[]" value="Gondia"> Gondia</label>
+                                    <label><input type="checkbox" name="districts[]" value="Hingoli"> Hingoli</label>
+                                    <label><input type="checkbox" name="districts[]" value="Jalgaon"> Jalgaon</label>
+                                    <label><input type="checkbox" name="districts[]" value="Jalna"> Jalna</label>
+                                    <label><input type="checkbox" name="districts[]" value="Kolhapur"> Kolhapur</label>
+                                    <label><input type="checkbox" name="districts[]" value="Latur"> Latur</label>
+                                    <label><input type="checkbox" name="districts[]" value="Mumbai City"> Mumbai City</label>
+                                    <label><input type="checkbox" name="districts[]" value="Mumbai Suburban"> Mumbai Suburban</label>
+                                    <label><input type="checkbox" name="districts[]" value="Nagpur"> Nagpur</label>
+                                    <label><input type="checkbox" name="districts[]" value="Nanded"> Nanded</label>
+                                    <label><input type="checkbox" name="districts[]" value="Nandurbar"> Nandurbar</label>
+                                    <label><input type="checkbox" name="districts[]" value="Nashik"> Nashik</label>
+                                    <label><input type="checkbox" name="districts[]" value="Dharashiv"> Dharashiv</label>
+                                    <label><input type="checkbox" name="districts[]" value="Palghar"> Palghar</label>
+                                    <label><input type="checkbox" name="districts[]" value="Parbhani"> Parbhani</label>
+                                    <label><input type="checkbox" name="districts[]" value="Pune"> Pune</label>
+                                    <label><input type="checkbox" name="districts[]" value="Raigad"> Raigad</label>
+                                    <label><input type="checkbox" name="districts[]" value="Ratnagiri"> Ratnagiri</label>
+                                    <label><input type="checkbox" name="districts[]" value="Sangli"> Sangli</label>
+                                    <label><input type="checkbox" name="districts[]" value="Satara"> Satara</label>
+                                    <label><input type="checkbox" name="districts[]" value="Sindhudurg"> Sindhudurg</label>
+                                    <label><input type="checkbox" name="districts[]" value="Solapur"> Solapur</label>
+                                    <label><input type="checkbox" name="districts[]" value="Thane"> Thane</label>
+                                    <label><input type="checkbox" name="districts[]" value="Wardha"> Wardha</label>
+                                    <label><input type="checkbox" name="districts[]" value="Washim"> Washim</label>
+                                    <label><input type="checkbox" name="districts[]" value="Yavatmal"> Yavatmal</label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Preferred Engineering Branches (If applicable)</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="eng_branches[]" value="Computer"> Computer Engineering</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="IT"> Information Technology</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="AI/ML"> AI & Machine Learning</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="Data Science"> Data Science</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="E&TC"> Electronics & Telecomm</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="Mechanical"> Mechanical Engineering</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="Civil"> Civil Engineering</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="Electrical"> Electrical Engineering</label>
+                                    <label><input type="checkbox" name="eng_branches[]" value="Chemical"> Chemical Engineering</label>
+                                </div>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Preferred Medical / Pharmacy Courses (If applicable)</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="med_courses[]" value="MBBS"> MBBS</label>
+                                    <label><input type="checkbox" name="med_courses[]" value="BDS"> BDS</label>
+                                    <label><input type="checkbox" name="med_courses[]" value="BAMS"> BAMS</label>
+                                    <label><input type="checkbox" name="med_courses[]" value="BHMS"> BHMS</label>
+                                    <label><input type="checkbox" name="med_courses[]" value="B.Pharm"> B.Pharm</label>
+                                    <label><input type="checkbox" name="med_courses[]" value="D.Pharm"> D.Pharm</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-large" style="width: 100%; margin-top: 30px;">Submit Enrollment Form</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/918623880103?text=Hello!%20I'm%20interested%20in%20your%20admission%20guidance." class="whatsapp-chat-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <div id="popup-message" class="popup"><div class="popup-content"><span class="close-button">&times;</span><h2>Thank You!</h2><p>Your enrollment has been submitted successfully.</p></div></div>
+
+    <footer>
+        <p>&copy; 2025 MV Admission Guidance. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
